@@ -9,6 +9,7 @@ void TestFunc(const CMyString& strParam)
     cout << strParam << endl;
 }
 
+
 int main()
 {
     CMyString strData("Hello");
