@@ -6,11 +6,19 @@
 
 int main()
 {
-	CMyString strData;
-	strData.SetString("Hello");
-	cout << strData.GetString() << endl;
+    CMyString strData, strTest;
+    strData.SetString("Hello");
+    strTest.SetString("World");
 
-	return 0;
+    // 복사 생성
+    CMyString strNewData(strData);
+    cout << strNewData.GetString() << endl;
+
+    // 단순 대입 연산자 호출
+    strNewData = strTest;
+    cout << strNewData.GetString() << endl;
+
+    return 0;
 }
 
 // 프로그램 실행: <Ctrl+F5> 또는 [디버그] > [디버깅하지 않고 시작] 메뉴
